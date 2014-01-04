@@ -23,6 +23,8 @@ public class MainActivity extends Activity implements OnClickListener {
 	private int number2;
 	private int number3;
 	private int number4;
+	
+
 
 
 
@@ -31,28 +33,38 @@ public class MainActivity extends Activity implements OnClickListener {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
+
 		//declare button, this has to be done after setContentView
 		Button button = (Button)findViewById(R.id.submit);
 		button.setOnClickListener(this);
+		
+
 
 	}
+	
+	
 
+    
+    
     // This class is called once the button is pressed
     public void onClick(View v) {
     	
     	
-    	//Get the input values as strings
+    	//These get redeclared every time i hit the button, and i think that is why the button only works once.
+    	//They have to be decared after setContentView
     	EditText input1= (EditText) findViewById(R.id.editText1);
-    	num1=input1.getText().toString();
     	EditText input2= (EditText) findViewById(R.id.editText2);
-    	num2=input2.getText().toString();
     	EditText input3= (EditText) findViewById(R.id.editText3);
-    	num3=input3.getText().toString();
     	EditText input4= (EditText) findViewById(R.id.editText4);
+		TextView text=(TextView) findViewById(R.id.textView2);
+
+    	
+    	//Get the input values as strings
+    	num1=input1.getText().toString();
+    	num2=input2.getText().toString();
+    	num3=input3.getText().toString();
     	num4=input4.getText().toString();
     	
-    	//declare textView where the answer will go
-        TextView text = (TextView) findViewById(R.id.textView2);
         
         
         //make input values integers
@@ -60,18 +72,12 @@ public class MainActivity extends Activity implements OnClickListener {
         number2 = Integer.parseInt(num2);
         number3 = Integer.parseInt(num3);
         number4 = Integer.parseInt(num4);
+        
 
-        //set textView as the answer (this does not work)
+		//set textView as the answer
     	text.setText(solver.solve(number1,number2,number3,number4));
     	
-    	/**
-    	 * When I say this
-    	 * 
-    	 * text.setText(solver.solve(3,5,7,3));
-    	 * 
-    	 * instead it works fine with those integers, so the problem must be the number
-    	 * integers but I'm not sure where it is.  Did I do parseInt wrong or something?
-    	 * 
-    	 */
+   
+    	 
     }
 }
