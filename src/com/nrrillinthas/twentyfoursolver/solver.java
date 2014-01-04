@@ -38,7 +38,12 @@ public class solver {
 
 	private static String finalAnser;
 
+	
 	public static String solve(int num1, int num2, int num3, int num4){
+		
+		finalAnser="No Solution";
+		numbers.clear();
+		
 		numbers.add((double) num1);
 		numbers.add((double) num2);
 		numbers.add((double) num3);
