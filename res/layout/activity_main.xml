@@ -16,7 +16,7 @@
 
     <EditText
         android:id="@+id/editText1"
-        android:layout_width="60dp"
+        android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView1"
         android:ems="4"
@@ -24,7 +24,7 @@
 
     <EditText
         android:id="@+id/editText2"
-        android:layout_width="60dp"
+        android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView1"
         android:layout_toRightOf="@+id/editText1"
@@ -33,7 +33,7 @@
 
     <EditText
         android:id="@+id/editText3"
-        android:layout_width="60dp"
+        android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView1"
         android:layout_toRightOf="@+id/editText2"
@@ -42,7 +42,7 @@
 
     <EditText
         android:id="@+id/editText4"
-        android:layout_width="60dp"
+        android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView1"
         android:layout_toRightOf="@+id/editText3"
